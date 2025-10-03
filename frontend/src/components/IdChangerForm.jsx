@@ -25,7 +25,7 @@ const IdChangerForm = () => {
     try {
       // NOTE: Using the non-encrypted endpoint for local testing.
       // Update this URL if you deploy to a live server.
-      const response = await axios.post('http://localhost:3001/api/process/regenerate-ids', formData, {
+      const response = await axios.post('https://coding-factory-backend.onrender.com/api/process/regenerate-ids', formData, {
         responseType: 'blob',
       });
 
