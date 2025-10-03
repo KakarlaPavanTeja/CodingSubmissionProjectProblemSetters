@@ -55,7 +55,7 @@ function App() {
             </button>
              {/* ID Changer Tab */}
              <button onClick={() => setActiveTab('id-changer')} className={`${tabStyle} ${activeTab === 'id-changer' ? activeTabStyle : inactiveTabStyle}`}>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M15.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 010 1.414zm-6 0a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 1.414L5.414 10l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" /></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1.414-4.586a1 1 0 00-1.414-1.414L8.586 13.414l-1.293-1.293a1 1 0 00-1.414 1.414L7.172 14.828a1 1 0 001.414 0l2.828-2.828zM8 7a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clipRule="evenodd" /></svg>
               ID Changer
             </button>
           </div>

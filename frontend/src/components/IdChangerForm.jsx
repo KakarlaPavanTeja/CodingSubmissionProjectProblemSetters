@@ -23,8 +23,7 @@ const IdChangerForm = () => {
     setStatus({ type: 'loading', message: 'Regenerating IDs on the server...' });
 
     try {
-      // NOTE: Using the non-encrypted endpoint for local testing.
-      // Update this URL if you deploy to a live server.
+      // Use the live Render backend URL
       const response = await axios.post('https://coding-factory-backend.onrender.com/api/process/regenerate-ids', formData, {
         responseType: 'blob',
       });
