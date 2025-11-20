@@ -1,4 +1,3 @@
-# File: backend/scripts/create_cq.py
 import json, uuid, base64, re, random, copy, sys
 
 def parse_test_cases(test_cases_data):
@@ -53,7 +52,9 @@ def main(lua_filename, testcases_filename):
         with open(lua_filename, 'r', encoding='utf-8') as file: content = file.read()
         with open(testcases_filename, 'r', encoding='utf-8') as tc_file: test_cases_data = json.load(tc_file)
 
-        difficulty_level = parse_section(content, "----------QUESTION_LEVEL_START----------", "----------QUESTION_LEVEL_END----------")
+        # FIX: Added .strip().upper() here to handle 'Easy' vs 'EASY'
+        difficulty_level = parse_section(content, "----------QUESTION_LEVEL_START----------", "----------QUESTION_LEVEL_END----------").strip().upper()
+        
         test_cases = assign_weights(parse_test_cases(test_cases_data[0]), difficulty_level)
         question_id = str(uuid.uuid4())
         coding_details_id = str(uuid.uuid4())
